@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Crafty+Girls&family=Roboto:wght@300&family=Rufina&display=swap");
+/* Miscelaneous */
+/*Helpers*/
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+:root {
+  --text-lg:2em;
+  --text-md:1.6em; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  color: black; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit; }
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 20vh 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10vh; }
+
+/*  Partials */
+header {
+  background-color: white;
+  grid-column: 1 / 13;
+  /*Poscion en la grilla del body*/
+  grid-row: 1 / 2;
+  /*Poscion en la grilla del body*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0; }
+
+.header {
+  width: 50%;
+  border-bottom: 0.1em solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0; }
+  .header__logo {
+    flex-basis: 40%; }
+    .header__logo__img {
+      width: 29rem; }
+  .header__menu {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1.2em;
+    padding-bottom: 1.2em; }
+    .header__menu__top {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1em; }
+      .header__menu__top__item {
+        font-size: 1.5em;
+        /*Utilizo el map de los tamaños de letra*/ }
+        .header__menu__top__item__link {
+          display: flex;
+          justify-content: space-around;
+          gap: 0.2em; }
+      .header__menu__top__idiomas {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.2em;
+        font-size: 1em;
+        /*Utilizo el map de los tamaños de letra*/ }
+        .header__menu__top__idiomas :nth-child(2) {
+          border-right: 0.1em solid black;
+          border-left: 0.1em solid black; }
+          .header__menu__top__idiomas :nth-child(2) a {
+            padding: 0.2em; }
+    .header__menu__bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.7em; }
+      .header__menu__bottom__item__text :nth-child(1) {
+        font-family: 'Crafty Girls', cursive;
+        font-size: 1.5em;
+        /*Utilizo el map de los tamaños de letra*/ }
+      .header__menu__bottom__item__text :nth-child(2) {
+        font-size: 1em;
+        /*Utilizo el map de los tamaños de letra*/ }

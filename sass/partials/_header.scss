@@ -1,0 +1,64 @@
+
+header{
+    background-color: white;
+    grid-column: 1 / 13; /*Poscion en la grilla del body*/
+    grid-row: 1 / 2;    /*Poscion en la grilla del body*/
+    @include flex(row, center,center,0);
+}
+
+.header{
+    width: 50%;
+    border-bottom: 0.1em solid black;
+    @include flex(row, space-between,flex-end,0);    
+    &__logo{
+        flex-basis: 40%;
+        &__img{
+            width: 29rem;
+        }
+    }
+    &__menu{
+        flex-basis: 60% ;
+        @include flex(column, flex-start,flex-end,1.2em);
+        padding-bottom: 1.2em;
+        &__top{
+            @include flex(row, flex-end,center,1em);
+            &__item{
+                font-size: map-get($sizes , text ); /*Utilizo el map de los tamaños de letra*/
+                &__link{
+                    display: flex;
+                    justify-content: space-around;
+                    gap: 0.2em;
+                }
+                
+            }
+            &__idiomas{
+                @include flex(row, space-between,center,0.2em);
+                font-size: map-get($sizes , caption ); /*Utilizo el map de los tamaños de letra*/
+
+                :nth-child(2){
+                    border-right: 0.1em solid black;
+                    border-left: 0.1em solid black;
+                    a{
+                        padding: 0.2em;
+                    }
+                }
+            }
+        }
+        &__bottom{
+            @include flex(row, flex-start,center,0.7em);
+            &__item{
+                &__text{
+                    :nth-child(1){
+                        font-family: 'Crafty Girls', cursive;
+                        font-size: map-get($sizes , text ); /*Utilizo el map de los tamaños de letra*/
+                    }
+                    :nth-child(2){
+                        font-size: map-get($sizes , caption ); /*Utilizo el map de los tamaños de letra*/
+                    }
+
+                }
+            }
+            
+        }
+    }
+}
