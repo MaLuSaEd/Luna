@@ -24,6 +24,7 @@ header{
             @include flex(row, flex-end,center,1em);
             &__item{
                 font-size: map-get($sizes , text ); /*Utilizo el map de los tamaños de letra*/
+                font-family: BebasNeue-Regular;
                 &__link{
                     display: flex;
                     justify-content: space-around;
@@ -49,11 +50,12 @@ header{
             &__item{
                 &__text{
                     :nth-child(1){
-                        font-family: 'Crafty Girls', cursive;
+                        font-family: PPNeueWorld;
                         font-size: map-get($sizes , text ); /*Utilizo el map de los tamaños de letra*/
                     }
                     :nth-child(2){
                         font-size: map-get($sizes , caption ); /*Utilizo el map de los tamaños de letra*/
+                        font-family: BebasNeue-Regular;
                     }
 
                 }

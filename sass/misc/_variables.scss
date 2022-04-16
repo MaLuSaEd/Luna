@@ -6,3 +6,13 @@ $sizes:(            /*Mapa de tamaños*/
     subtext: 1.2em,
     caption: 1em 
 );
+
+@font-face {
+    font-family: BebasNeue-Regular;
+    src: url(../../fonts/BebasNeue-Regular.ttf);
+ }
+
+ @font-face {
+    font-family: PPNeueWorld;
+    src: url(../../fonts/PPNeueWorld-SemiExtendedBlack.otf);
+ }

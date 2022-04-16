@@ -3,11 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Crafty+Girls&family=Roboto:wght@300&family=Rufina&display=swap");
 /* Miscelaneous */
 /*Helpers*/
-a {
-  text-decoration: none;
-  display: inline-block;
-  color: inherit; }
-
 * {
   margin: 0;
   padding: 0;
@@ -35,6 +30,14 @@ body {
   min-height: 100vh;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 20vh 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10vh; }
+
+@font-face {
+  font-family: BebasNeue-Regular;
+  src: url(../../fonts/BebasNeue-Regular.ttf); }
+
+@font-face {
+  font-family: PPNeueWorld;
+  src: url(../../fonts/PPNeueWorld-SemiExtendedBlack.otf); }
 
 /*  Partials */
 header {
@@ -77,7 +80,8 @@ header {
       gap: 1em; }
       .header__menu__top__item {
         font-size: 1.5em;
-        /*Utilizo el map de los tamaños de letra*/ }
+        /*Utilizo el map de los tamaños de letra*/
+        font-family: BebasNeue-Regular; }
         .header__menu__top__item__link {
           display: flex;
           justify-content: space-around;
@@ -102,9 +106,10 @@ header {
       align-items: center;
       gap: 0.7em; }
       .header__menu__bottom__item__text :nth-child(1) {
-        font-family: 'Crafty Girls', cursive;
+        font-family: PPNeueWorld;
         font-size: 1.5em;
         /*Utilizo el map de los tamaños de letra*/ }
       .header__menu__bottom__item__text :nth-child(2) {
         font-size: 1em;
-        /*Utilizo el map de los tamaños de letra*/ }
+        /*Utilizo el map de los tamaños de letra*/
+        font-family: BebasNeue-Regular; }
