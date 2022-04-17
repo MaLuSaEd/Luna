@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Imports */
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Crafty+Girls&family=Roboto:wght@300&family=Rufina&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 /* Miscelaneous */
 /*Helpers*/
 * {
@@ -32,12 +33,9 @@ body {
   grid-template-rows: 20vh 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10vh; }
 
 @font-face {
-  font-family: BebasNeue-Regular;
-  src: url(../../fonts/BebasNeue-Regular.ttf); }
-
-@font-face {
   font-family: PPNeueWorld;
-  src: url(../../fonts/PPNeueWorld-SemiExtendedBlack.otf); }
+  font-weight: bold;
+  src: url("../../fonts/PPNeueWorld-SemiExtendedBlack.otf") format("otf"); }
 
 /*  Partials */
 header {
@@ -53,7 +51,7 @@ header {
   gap: 0; }
 
 .header {
-  width: 50%;
+  width: 80%;
   border-bottom: 0.1em solid black;
   display: flex;
   flex-direction: row;
@@ -81,19 +79,24 @@ header {
       .header__menu__top__item {
         font-size: 1.5em;
         /*Utilizo el map de los tamaños de letra*/
-        font-family: BebasNeue-Regular; }
+        font-family: 'Bebas Neue', cursive; }
         .header__menu__top__item__link {
           display: flex;
           justify-content: space-around;
-          gap: 0.2em; }
+          gap: 0.2em;
+          letter-spacing: 0.2em;
+          transform: scale(100%, 120%); }
       .header__menu__top__idiomas {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         gap: 0.2em;
-        font-size: 1em;
-        /*Utilizo el map de los tamaños de letra*/ }
+        font-size: 1.5em;
+        /*Utilizo el map de los tamaños de letra*/
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 0.2em;
+        transform: scale(100%, 120%); }
         .header__menu__top__idiomas :nth-child(2) {
           border-right: 0.1em solid black;
           border-left: 0.1em solid black; }
@@ -104,12 +107,12 @@ header {
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      gap: 0.7em; }
+      gap: 1em; }
       .header__menu__bottom__item__text :nth-child(1) {
-        font-family: PPNeueWorld;
-        font-size: 1.5em;
+        font-family: 'PPNeueWorld';
+        font-size: 2.2em;
         /*Utilizo el map de los tamaños de letra*/ }
       .header__menu__bottom__item__text :nth-child(2) {
         font-size: 1em;
         /*Utilizo el map de los tamaños de letra*/
-        font-family: BebasNeue-Regular; }
+        font-family: 'Bebas Neue', cursive; }

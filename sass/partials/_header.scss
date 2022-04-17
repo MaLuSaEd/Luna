@@ -7,7 +7,7 @@ header{
 }
 
 .header{
-    width: 50%;
+    width: 80%;
     border-bottom: 0.1em solid black;
     @include flex(row, space-between,flex-end,0);    
     &__logo{
@@ -24,18 +24,22 @@ header{
             @include flex(row, flex-end,center,1em);
             &__item{
                 font-size: map-get($sizes , text ); /*Utilizo el map de los tamaños de letra*/
-                font-family: BebasNeue-Regular;
+                font-family: 'Bebas Neue', cursive;
                 &__link{
                     display: flex;
                     justify-content: space-around;
                     gap: 0.2em;
+                    letter-spacing: 0.2em;
+                    transform: scale(100%,120%);
                 }
                 
             }
             &__idiomas{
                 @include flex(row, space-between,center,0.2em);
-                font-size: map-get($sizes , caption ); /*Utilizo el map de los tamaños de letra*/
-
+                font-size: map-get($sizes , text ); /*Utilizo el map de los tamaños de letra*/
+                font-family: 'Bebas Neue', cursive;
+                letter-spacing: 0.2em;
+                transform: scale(100%,120%);
                 :nth-child(2){
                     border-right: 0.1em solid black;
                     border-left: 0.1em solid black;
@@ -46,16 +50,17 @@ header{
             }
         }
         &__bottom{
-            @include flex(row, flex-start,center,0.7em);
+            @include flex(row, flex-start,center,1em);
             &__item{
                 &__text{
                     :nth-child(1){
-                        font-family: PPNeueWorld;
-                        font-size: map-get($sizes , text ); /*Utilizo el map de los tamaños de letra*/
+                        font-family: 'PPNeueWorld';
+                        font-size: 2.2em; /*Utilizo el map de los tamaños de letra*/
+                        
                     }
                     :nth-child(2){
                         font-size: map-get($sizes , caption ); /*Utilizo el map de los tamaños de letra*/
-                        font-family: BebasNeue-Regular;
+                        font-family: 'Bebas Neue', cursive;
                     }
 
                 }

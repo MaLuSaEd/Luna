@@ -8,11 +8,7 @@ $sizes:(            /*Mapa de tamaños*/
 );
 
 @font-face {
-    font-family: BebasNeue-Regular;
-    src: url(../../fonts/BebasNeue-Regular.ttf);
- }
-
- @font-face {
     font-family: PPNeueWorld;
-    src: url(../../fonts/PPNeueWorld-SemiExtendedBlack.otf);
- }
+    font-weight: bold;
+    src: url("../../fonts/PPNeueWorld-SemiExtendedBlack.otf") format("otf");
+}
