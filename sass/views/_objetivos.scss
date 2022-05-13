@@ -1,0 +1,25 @@
+.objetivos{
+    @include flex(column, flex-start,center,1em);
+    width: 80%;
+   
+    &__titulo{
+        @include flex(column,center,center,0);
+        font-size: map-get($sizes , jumbo ); /*Utilizo el map de los tamaños de letra*/
+        font-family: 'PPNeueWorld';
+        width: 100%;
+        border-bottom: 0.05em solid black;
+    }
+    &__contenido{
+        @include flex(column,center,center,1em);
+        &__titulo{
+            font-size: map-get($sizes , display ); /*Utilizo el map de los tamaños de letra*/
+            font-family: 'PPNeueWorld';
+        }
+        &__texto{
+            @include flex(column, center, center, 0.3em);
+            width: 80%;
+            font-size: map-get($sizes , title ); /*Utilizo el map de los tamaños de letra*/
+            font-family: 'PPNeueWorld';
+        }
+    }
+}

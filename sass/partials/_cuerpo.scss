@@ -1,0 +1,6 @@
+.cuerpo{
+    background-color: white;
+    grid-column: 1 / 13; /*Poscion en la grilla del body*/
+    grid-row: 2 / 13;    /*Poscion en la grilla del body*/
+    @include flex(row, center,baseline,0);
+}

@@ -18,8 +18,8 @@ header{
     }
     &__menu{
         flex-basis: 60% ;
-        @include flex(column, flex-start,flex-end,1.2em);
-        padding-bottom: 1.2em;
+        @include flex(column, flex-start,flex-end,0.5em);
+        padding-bottom: 0em;
         &__top{
             @include flex(row, flex-end,center,1em);
             &__item{
@@ -61,6 +61,68 @@ header{
                     :nth-child(2){
                         font-size: map-get($sizes , caption ); /*Utilizo el map de los tamaños de letra*/
                         font-family: 'Bebas Neue', cursive;
+                    }
+
+                    &__dropdown{
+
+
+                        &--btn{
+                            :nth-child(1){
+                                font-family: 'PPNeueWorld';
+                                font-size: 2.2rem; /*Utilizo el map de los tamaños de letra*/
+                                
+                            }
+                            :nth-child(2){
+                                font-size: map-get($sizes , caption ); /*Utilizo el map de los tamaños de letra*/
+                                font-family: 'Bebas Neue', cursive;
+                            }
+                            background-color: Transparent;
+                            background-repeat:no-repeat;
+                            border: none;
+                            cursor:pointer;
+                            overflow: hidden;  
+                            font-family: 'PPNeueWorld';
+                            font-size: 2.2em; /*Utilizo el map de los tamaños de letra*/
+                        }
+
+                        &:hover{
+                            .header__menu__bottom__item__text__dropdown--content {
+                                display: flex;
+                                flex-direction: column;
+                                font-family: 'PPNeueWorld';
+                                font-size: 2.2em; /*Utilizo el map de los tamaños de letra*/
+                            }
+                            .header__menu__bottom__item__text__dropdown--btn {
+                                background-color: transparent;
+                            }
+                        } 
+                        &--content{
+                            display: none;
+                            position: absolute;
+                            background-color: #f1f1f1;
+                            min-width: 3em;
+                            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                            z-index: 1;
+                            a{ 
+                                &:hover {background-color: #ddd;}
+                                display: flex;
+                                justify-content: center;
+                                padding-left: 0.5em;
+                                padding-right: 0.5em;
+                            }
+                            :nth-child(1){
+                                border-top: solid 0.01em black;
+                                border-left: solid 0.01em black;
+                                border-right: solid 0.01em black;
+                                border-bottom: solid 0.01em black;
+                                
+                            }
+                            :nth-child(2){
+                                border-bottom: solid 0.01em black;
+                                border-left: solid 0.01em black;
+                                border-right: solid 0.01em black;
+                            }
+                        }
                     }
 
                 }
