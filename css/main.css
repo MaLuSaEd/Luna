@@ -67,9 +67,11 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 0.5em;
     padding-bottom: 0em; }
+    .header__menu .row__top {
+      width: 100%; }
     .header__menu__top {
       display: flex;
       flex-direction: row;
@@ -102,10 +104,12 @@ header {
           border-left: 0.1em solid black; }
           .header__menu__top__idiomas :nth-child(2) a {
             padding: 0.2em; }
+    .header__menu .row__bottom {
+      width: 90%; }
     .header__menu__bottom {
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
       gap: 1em; }
       .header__menu__bottom__item__text :nth-child(1) {
@@ -117,6 +121,11 @@ header {
         /*Utilizo el map de los tamaños de letra*/
         font-family: 'Bebas Neue', cursive; }
       .header__menu__bottom__item__text__dropdown--btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
         background-color: Transparent;
         background-repeat: no-repeat;
         border: none;
@@ -135,7 +144,10 @@ header {
           font-family: 'Bebas Neue', cursive; }
       .header__menu__bottom__item__text__dropdown:hover .header__menu__bottom__item__text__dropdown--content {
         display: flex;
+        gap: 0.5em;
+        margin-top: 0;
         flex-direction: column;
+        justify-content: center;
         font-family: 'PPNeueWorld';
         font-size: 2.2em;
         /*Utilizo el map de los tamaños de letra*/ }
@@ -144,9 +156,8 @@ header {
       .header__menu__bottom__item__text__dropdown--content {
         display: none;
         position: absolute;
-        background-color: #f1f1f1;
+        background-color: transparent;
         min-width: 3em;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1; }
         .header__menu__bottom__item__text__dropdown--content a {
           display: flex;
@@ -154,16 +165,7 @@ header {
           padding-left: 0.5em;
           padding-right: 0.5em; }
           .header__menu__bottom__item__text__dropdown--content a:hover {
-            background-color: #ddd; }
-        .header__menu__bottom__item__text__dropdown--content :nth-child(1) {
-          border-top: solid 0.01em black;
-          border-left: solid 0.01em black;
-          border-right: solid 0.01em black;
-          border-bottom: solid 0.01em black; }
-        .header__menu__bottom__item__text__dropdown--content :nth-child(2) {
-          border-bottom: solid 0.01em black;
-          border-left: solid 0.01em black;
-          border-right: solid 0.01em black; }
+            background-color: transparent; }
 
 .cuerpo {
   background-color: white;
@@ -172,10 +174,10 @@ header {
   grid-row: 2 / 13;
   /*Poscion en la grilla del body*/
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: baseline;
-  gap: 0; }
+  align-items: center;
+  gap: 3em; }
 
 /*views*/
 .objetivos {
@@ -216,3 +218,13 @@ header {
       font-size: 2rem;
       /*Utilizo el map de los tamaños de letra*/
       font-family: 'PPNeueWorld'; }
+
+.ppal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 80%;
+  height: 100vh;
+  background-color: white; }

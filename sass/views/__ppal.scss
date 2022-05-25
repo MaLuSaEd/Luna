@@ -1,0 +1,6 @@
+.ppal{
+    @include flex(column, center ,center,1em);
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+}

@@ -18,8 +18,13 @@ header{
     }
     &__menu{
         flex-basis: 60% ;
-        @include flex(column, flex-start,flex-end,0.5em);
+        @include flex(column, flex-start,flex-start,0.5em);
         padding-bottom: 0em;
+        
+        .row__top{
+            width: 100%;
+        }
+
         &__top{
             @include flex(row, flex-end,center,1em);
             &__item{
@@ -49,8 +54,13 @@ header{
                 }
             }
         }
+
+        .row__bottom{
+            width: 90%;
+        }
+
         &__bottom{
-            @include flex(row, flex-start,center,1em);
+            @include flex(row, space-between,center,1em);
             &__item{
                 &__text{
                     :nth-child(1){
@@ -65,8 +75,8 @@ header{
 
                     &__dropdown{
 
-
                         &--btn{
+                            @include flex(column, center,center,0);
                             :nth-child(1){
                                 font-family: 'PPNeueWorld';
                                 font-size: 2.2rem; /*Utilizo el map de los tamaños de letra*/
@@ -88,7 +98,10 @@ header{
                         &:hover{
                             .header__menu__bottom__item__text__dropdown--content {
                                 display: flex;
+                                gap: 0.5em;
+                                margin-top: 0;
                                 flex-direction: column;
+                                justify-content: center;
                                 font-family: 'PPNeueWorld';
                                 font-size: 2.2em; /*Utilizo el map de los tamaños de letra*/
                             }
@@ -99,28 +112,15 @@ header{
                         &--content{
                             display: none;
                             position: absolute;
-                            background-color: #f1f1f1;
+                            background-color: transparent;
                             min-width: 3em;
-                            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                             z-index: 1;
                             a{ 
-                                &:hover {background-color: #ddd;}
+                                &:hover {background-color:transparent;}
                                 display: flex;
                                 justify-content: center;
                                 padding-left: 0.5em;
                                 padding-right: 0.5em;
-                            }
-                            :nth-child(1){
-                                border-top: solid 0.01em black;
-                                border-left: solid 0.01em black;
-                                border-right: solid 0.01em black;
-                                border-bottom: solid 0.01em black;
-                                
-                            }
-                            :nth-child(2){
-                                border-bottom: solid 0.01em black;
-                                border-left: solid 0.01em black;
-                                border-right: solid 0.01em black;
                             }
                         }
                     }
