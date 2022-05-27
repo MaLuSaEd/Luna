@@ -1,0 +1,52 @@
+.equipo{
+    @include flex(column, center,center,1em);
+    width: 80%;
+    
+   
+    &__titulo{
+        @include flex(column,center,center,0);
+        font-size: map-get($sizes , jumbo ); /*Utilizo el map de los tamaños de letra*/
+        font-family: 'PPNeueWorld';
+        width: 100%;
+        border-bottom: 0.05em solid black;
+    }
+
+    &__contenido{
+        width: 100%;
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        .integrante{
+            &__foto{
+                .foto{
+                    width: 80%;
+                    height: auto;
+                }
+            }
+
+            &__texto{
+                @include flex(column,center,center,0.3rem);
+                width: 80%;
+                text-align: justify;
+                margin-bottom: -1em !important;
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    width: 100%;
+                }
+                .nombre{
+                    text-align: center;
+                    font-size: 2rem;
+                    font-family: 'PPNeueWorld';
+                    width: 100%;
+                    border-bottom: 0.05em solid black;
+
+                }
+
+            }
+        }
+
+    }
+}

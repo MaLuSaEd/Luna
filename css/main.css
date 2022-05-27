@@ -228,3 +228,50 @@ header {
   width: 80%;
   height: 100vh;
   background-color: white; }
+
+.equipo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 80%; }
+  .equipo__titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    font-size: 6.8rem;
+    /*Utilizo el map de los tamaños de letra*/
+    font-family: 'PPNeueWorld';
+    width: 100%;
+    border-bottom: 0.05em solid black; }
+  .equipo__contenido {
+    width: 100%;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr); }
+    .equipo__contenido .integrante__foto .foto {
+      width: 80%;
+      height: auto; }
+    .equipo__contenido .integrante__texto {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3rem;
+      width: 80%;
+      text-align: justify;
+      margin-bottom: -1em !important; }
+      .equipo__contenido .integrante__texto:after {
+        content: "";
+        display: inline-block;
+        width: 100%; }
+      .equipo__contenido .integrante__texto .nombre {
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'PPNeueWorld';
+        width: 100%;
+        border-bottom: 0.05em solid black; }
